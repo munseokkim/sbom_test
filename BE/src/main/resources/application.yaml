@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: seolstudy
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+  profiles:
+    active: dev
+
+# JWT 시크릿 (32자 이상). 운영에서는 환경변수 JWT_SECRET 로 덮어쓰기.
+jwt:
+  secret: ${JWT_SECRET:seolstudy-jwt-secret-key-at-least-32-chars}
